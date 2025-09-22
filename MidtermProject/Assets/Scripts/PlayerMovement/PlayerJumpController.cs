@@ -4,17 +4,17 @@ using UnityEngine.InputSystem;
 public class PlayerJumpController : MonoBehaviour
 {
     public float jumpForce;
-
     [Header("Grounding")]
     public LayerMask groundMask;
     public float groundRayLength = 0.1f;
     public int numRaycasts = 1;
-
     public float playerModelSize;
+    public bool IsGrounded = false;
+
+    
 
     private Rigidbody2D playerRigidbody;
 
-    public bool IsGrounded = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -55,4 +55,6 @@ public class PlayerJumpController : MonoBehaviour
         IsGrounded = false;
         Debug.Log("not grounded");
     }
+
+    
 }

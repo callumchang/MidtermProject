@@ -9,10 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6405295075269415044}
-  - component: {fileID: -2227774102407014193}
   - component: {fileID: -5679595243930141198}
   - component: {fileID: -2377252053923324685}
   - component: {fileID: -2561353384695761313}
+  - component: {fileID: -2227774102407014193}
+  - component: {fileID: -7838813558648220099}
+  - component: {fileID: 7082212169403815195}
   m_Layer: 0
   m_Name: SamuraiTestplayer
   m_TagString: Untagged
@@ -35,28 +37,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &-2227774102407014193
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9080176981796929021}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &-5679595243930141198
 Rigidbody2D:
   serializedVersion: 5
@@ -185,3 +165,59 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0071845, y: 1.7066299}
   m_EdgeRadius: 0
+--- !u!95 &-2227774102407014193
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080176981796929021}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 868d6787392254e0fba5fefb214a4bb0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-7838813558648220099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080176981796929021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dced1accb16441308c3a6eed402856c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpForce: 5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  groundRayLength: 0.1
+  numRaycasts: 1
+  playerModelSize: 0
+  IsGrounded: 0
+--- !u!114 &7082212169403815195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080176981796929021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e258d9959994d2bab9abdf7378a485, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  samuraiAnimator: {fileID: -2227774102407014193}
