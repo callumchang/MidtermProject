@@ -28,6 +28,7 @@ public class PlayerJumpController : MonoBehaviour
         float verticalVelocity = playerRigidbody.linearVelocityY;
 
         checkGrounded();
+        Debug.Log(IsGrounded);
 
         bool inputJump = Input.GetKeyDown(KeyCode.Space);
         if (inputJump && IsGrounded)
@@ -40,6 +41,7 @@ public class PlayerJumpController : MonoBehaviour
 
     private void checkGrounded()
     {
+        IsGrounded = false;
         for (float i = 0; i <= playerModelSize; i += playerModelSize / numRaycasts)
         {
             float raycastOrigin = i - playerModelSize / 2;
@@ -49,11 +51,11 @@ public class PlayerJumpController : MonoBehaviour
             if (hit.collider != null)
             {
                 IsGrounded = true;
+                Debug.Log("grounded");
                 return;
             }
         }
-        IsGrounded = false;
-        Debug.Log("not grounded");
+        // Debug.Log("not grounded");
     }
 
     

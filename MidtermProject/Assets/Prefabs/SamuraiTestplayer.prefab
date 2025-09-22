@@ -12,10 +12,14 @@ GameObject:
   - component: {fileID: -5679595243930141198}
   - component: {fileID: -2377252053923324685}
   - component: {fileID: -2561353384695761313}
+<<<<<<< HEAD
   - component: {fileID: -2227774102407014193}
   - component: {fileID: -7838813558648220099}
   - component: {fileID: 7082212169403815195}
   m_Layer: 0
+=======
+  m_Layer: 6
+>>>>>>> fcc948c5bd37d63960021c4a7f6e9cd18db2f9ab
   m_Name: SamuraiTestplayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +133,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 811a969675e464509a2e73d44f790c7a, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -153,17 +157,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0024754107, y: -0.000000059604645}
+  m_Offset: {x: -0.002475381, y: 0.84940815}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1, y: 1.8}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 1, y: 1.7}
     newSize: {x: 0.007333333, y: 0.007333333}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0071845, y: 1.7066299}
+  m_Size: {x: 1.0071845, y: 1.7066298}
   m_EdgeRadius: 0
 --- !u!95 &-2227774102407014193
 Animator:
