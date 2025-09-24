@@ -6,6 +6,7 @@ public class UnitizedJumps : MonoBehaviour
     [SerializeField] float forceOfGravity = 1;
     [SerializeField] float fallingForceOfGravity = 5;
     [SerializeField] LayerMask groundLayer;
+    [SerializeField] AudioClip jumpNoise;
 
     private Rigidbody2D playerRb;
     private BoxCollider2D playerHitBox;
@@ -40,6 +41,7 @@ public class UnitizedJumps : MonoBehaviour
         // Debug.Log(Physics2D.gravity.y);
         // Debug.Log("Jump force is: " + jumpForce);
         playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        AudioManager.Instance?.playSFX(jumpNoise);
     }
 
     private void preventFloatJump()
