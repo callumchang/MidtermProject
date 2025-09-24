@@ -62,6 +62,6 @@ public class UnitizedJumps : MonoBehaviour
         Collider2D onGround = Physics2D.OverlapArea(pointA, pointB, groundLayer);
 
         isGrounded = onGround != null;
-        Debug.Log(isGrounded);
+        // Debug.Log(isGrounded);
     }
 }
