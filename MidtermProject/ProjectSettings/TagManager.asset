@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - BreakableWall
+  tags:
   - Teleporter Spot
   layers:
   - Default

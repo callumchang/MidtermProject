@@ -28,7 +28,7 @@ public class PlayerJumpController : MonoBehaviour
         float verticalVelocity = playerRigidbody.linearVelocityY;
 
         checkGrounded();
-        Debug.Log(IsGrounded);
+        // Debug.Log(IsGrounded);
 
         bool inputJump = Input.GetKeyDown(KeyCode.Space);
         if (inputJump && IsGrounded)
@@ -51,7 +51,7 @@ public class PlayerJumpController : MonoBehaviour
             if (hit.collider != null)
             {
                 IsGrounded = true;
-                Debug.Log("grounded");
+                // Debug.Log("grounded");
                 return;
             }
         }
