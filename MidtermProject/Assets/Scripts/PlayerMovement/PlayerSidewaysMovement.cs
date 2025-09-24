@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 
 public class PlayerSidewaysMovement : MonoBehaviour
@@ -7,12 +9,14 @@ public class PlayerSidewaysMovement : MonoBehaviour
     [SerializeField] Animator samuraiAnimator;
 
     private Rigidbody2D playerRigidbody;
-    private Vector2 movement;
+    private SpriteRenderer playerSprite;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -23,15 +27,26 @@ public class PlayerSidewaysMovement : MonoBehaviour
 
     private void handleMovement()
     {
-        float input = Input.GetAxis("Horizonal");
-        movement.x = input * speed * Time.deltaTime;
-        transform.Translate(movement);
+        float input = Input.GetAxis("Horizontal");
+        float movingDirection = playerRigidbody.linearVelocityX = input * speed;
 
-        if (input != 0)
+        if (movingDirection != 0)
         {
             samuraiAnimator.SetBool("isRunning", true);
-        } 
+        }
+        else
+        {
+            samuraiAnimator.SetBool("isRunning", false);
+        }
 
-        samuraiAnimator.SetBool("isRunning", false);
+
+        if (input > 0)
+        {
+            playerSprite.flipX = false;
+        }
+        else if (input < 0)
+        {
+            playerSprite.flipX = true;
+        }
     }
 }
