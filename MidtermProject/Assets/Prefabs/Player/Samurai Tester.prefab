@@ -132,7 +132,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.7}
+    oldSize: {x: 1.1, y: 1.7}
     newSize: {x: 1, y: 1.7}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2728a1d789251964989109b800506176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportSFX: {fileID: 8300000, guid: e59aefb00bfddc34780da0e9cef75a5f, type: 3}
 --- !u!114 &-2520247130139110639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,4 +248,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe0cec47f3da140398ae917eaed8f18e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactButton: q
+  interactButton: e

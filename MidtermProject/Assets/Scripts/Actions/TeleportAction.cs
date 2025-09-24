@@ -6,20 +6,28 @@ public class teleport : MonoBehaviour
     private Rigidbody2D playerRB;
     private GameObject locationOfTeleporter;
 
+    [SerializeField] AudioClip teleportSFX;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
+        PlayerInteractController.onInteract += ActivateTeleport;
     }
 
     // Update is called once per frame
     void Update()
     {
         // Debug.Log(locationOfTeleporter);
-        if (Input.GetButtonDown("Teleport") && locationOfTeleporter != null)
+    }
+
+    private void ActivateTeleport()
+    {
+        if (locationOfTeleporter != null)
         {
             transform.position = locationOfTeleporter.GetComponent<TeleporterSpotLogic>().getTeleportSpot().position;
+            AudioManager.Instance?.playSFX(teleportSFX, 2f, 3f);
         }
     }
 

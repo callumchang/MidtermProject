@@ -4,8 +4,8 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
 
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource sfxSource;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource sfxSource;
     [Header("Volumes")]
     [Range(0f, 1f)][SerializeField] float musicVolume = 1f;
     [Range(0f, 1f)][SerializeField] float sfxVolume = 1f;
@@ -31,9 +31,10 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void playSFX(AudioClip clip)
+    public void playSFX(AudioClip clip, float pitchLowRange = 0.75f, float pitchHighRange = 1.5f)
     {
         if (clip == null) return;
+        sfxSource.pitch = UnityEngine.Random.Range(pitchLowRange, pitchHighRange);
         sfxSource.PlayOneShot(clip, sfxVolume);
     }
 

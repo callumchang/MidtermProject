@@ -9,6 +9,7 @@ public class MovingPlatform : MonoBehaviour
     public Transform[] points;
 
     private int i;
+    private bool vinesActive = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,11 +35,17 @@ public class MovingPlatform : MonoBehaviour
         speed = 0;
         yield return new WaitForSeconds(5);
         speed = oldSpeed;
+        vinesActive = false;
     }
 
     private void HoldPlatform()
     {
-        StartCoroutine(StopPlatformMovement());
+        if (!vinesActive)
+        {
+            StartCoroutine(StopPlatformMovement());
+            vinesActive = true;
+            Debug.Log("activated vines");
+        }
     }
 
     public void UpdatePlatformSpeed(float newSpeed)
