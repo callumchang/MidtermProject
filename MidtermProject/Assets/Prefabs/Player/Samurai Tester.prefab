@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -5158543307067710162}
   - component: {fileID: 6122604119732270905}
   - component: {fileID: -2520247130139110639}
+  - component: {fileID: -5633812259240940298}
   m_Layer: 0
   m_Name: Samurai Tester
   m_TagString: Player
@@ -249,3 +250,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactButton: e
+--- !u!114 &-5633812259240940298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424524378094125501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c967d1c349e1e432d9aa08106f3ddd31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
