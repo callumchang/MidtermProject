@@ -10,18 +10,24 @@ public class MovingPlatform : MonoBehaviour
 
     private int i;
     private bool vinesActive = false;
+    private BoxCollider2D platformCollider;
+    private Bounds platformBounds;
+    float platformSize;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // transform.position = points[startingPoint].position;
         UseVines.onActivateVines += HoldPlatform;
+        platformCollider = GetComponent<BoxCollider2D>();
+        platformBounds = platformCollider.bounds;
+        platformSize = platformBounds.max.x - platformBounds.min.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
+        if (Vector2.Distance(transform.position, points[i].position) < platformSize/2)
         {
             i += 1;
             if (i == points.Length) i = 0;
@@ -61,5 +67,10 @@ public class MovingPlatform : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         collision.transform.SetParent(null);
+    }
+
+    private void OnDestroy()
+    {
+        UseVines.onActivateVines -= HoldPlatform;
     }
 }

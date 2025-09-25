@@ -21,10 +21,16 @@ public class ToggleSprite : MonoBehaviour
         
     }
 
-    protected virtual void AddEvents()
+    private void AddEvents()
     {
         BreakableWall.showOutline += showSprite;
         BreakableWall.hideOutline += hideSprite;
+    }
+
+    private void OnDestroy()
+    {
+        BreakableWall.showOutline -= showSprite;
+        BreakableWall.hideOutline -= hideSprite;
     }
 
     private void hideSprite()

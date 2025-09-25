@@ -3,7 +3,7 @@ using UnityEngine;
 public class UseVines : MonoBehaviour
 {
     private bool inRange = false;
-    private MovingPlatform movingPlatform;
+    // private MovingPlatform movingPlatform;
 
     public delegate void ActivateVines();
     public static ActivateVines onActivateVines;
@@ -11,7 +11,7 @@ public class UseVines : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        movingPlatform = GetComponent<MovingPlatform>();
+        // movingPlatform = GetComponent<MovingPlatform>();
         PlayerInteractController.onInteract += ActivateVinesHelper;
     }
 
