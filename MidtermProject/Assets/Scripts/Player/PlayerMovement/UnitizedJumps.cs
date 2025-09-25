@@ -10,6 +10,7 @@ public class UnitizedJumps : MonoBehaviour
 
     private Rigidbody2D playerRb;
     private BoxCollider2D playerHitBox;
+    private Animator animator;
     public bool isGrounded;
 
 
@@ -19,6 +20,7 @@ public class UnitizedJumps : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         playerHitBox = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,14 @@ public class UnitizedJumps : MonoBehaviour
 
         preventFloatJump();
         // Debug.Log("The player y velocity: " + playerRb.linearVelocity.y + "\n" + "The player gravity: " + playerRb.gravityScale);
+
+        bool inAir = !isGrounded;
+        if (animator != null)
+        {
+            animator.SetBool("isJumping", inAir);
+
+        }
+
     }
 
     private void handleJump()
