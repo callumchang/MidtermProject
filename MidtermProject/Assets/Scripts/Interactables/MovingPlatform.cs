@@ -8,6 +8,7 @@ public class MovingPlatform : MonoBehaviour
     public float speed;
     public int startingPoint = 0;
     public Transform[] points;
+    public bool flipSprite = false;
 
     private SpriteRenderer sprite;
     private int i;
@@ -32,7 +33,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, points[i].position) < platformSize / 2)
         {
-            sprite.flipX = true;
+            if (flipSprite) sprite.flipX = true;
             i += 1;
             if (i == points.Length)
             {
@@ -62,16 +63,6 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    public void UpdatePlatformSpeed(float newSpeed)
-    {
-        speed = newSpeed;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        collision.transform.SetParent(transform);
-    }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         collision.transform.SetParent(null);
@@ -80,19 +71,5 @@ public class MovingPlatform : MonoBehaviour
     private void OnDestroy()
     {
         UseVines.onActivateVines -= HoldPlatform;
-    }
-
-   void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            PlayerDeath.onDeath += RestartScene;
-        }
-    }
-
-    private void RestartScene()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        PlayerDeath.onDeath -= RestartScene;
     }
 }

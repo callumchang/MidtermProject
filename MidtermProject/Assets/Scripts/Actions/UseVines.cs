@@ -7,6 +7,7 @@ public class UseVines : MonoBehaviour
 
     public delegate void ActivateVines();
     public static ActivateVines onActivateVines;
+    public SpriteRenderer outlineRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,6 +35,7 @@ public class UseVines : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = true;
+            outlineRenderer.enabled = true;
         }
     }
 
@@ -42,6 +44,7 @@ public class UseVines : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = false;
+            outlineRenderer.enabled = false;
         }
     }
 }
