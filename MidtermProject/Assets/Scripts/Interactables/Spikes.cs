@@ -11,7 +11,7 @@ public class Spikes : MonoBehaviour
         }
     }
 
-    private void RestartScene()
+    public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         PlayerDeath.onDeath -= RestartScene;

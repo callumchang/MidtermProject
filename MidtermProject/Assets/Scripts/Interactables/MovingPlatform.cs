@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Adapted from https://youtu.be/GtX1p4cwYOc?si=1GFB4Krbm5gJ9cGs
 public class MovingPlatform : MonoBehaviour
@@ -8,6 +9,7 @@ public class MovingPlatform : MonoBehaviour
     public int startingPoint = 0;
     public Transform[] points;
 
+    private SpriteRenderer sprite;
     private int i;
     private bool vinesActive = false;
     private BoxCollider2D platformCollider;
@@ -19,6 +21,7 @@ public class MovingPlatform : MonoBehaviour
     {
         // transform.position = points[startingPoint].position;
         UseVines.onActivateVines += HoldPlatform;
+        sprite = GetComponent<SpriteRenderer>();
         platformCollider = GetComponent<BoxCollider2D>();
         platformBounds = platformCollider.bounds;
         platformSize = platformBounds.max.x - platformBounds.min.x;
@@ -27,10 +30,15 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, points[i].position) < platformSize/2)
+        if (Vector2.Distance(transform.position, points[i].position) < platformSize / 2)
         {
+            sprite.flipX = true;
             i += 1;
-            if (i == points.Length) i = 0;
+            if (i == points.Length)
+            {
+                i = 0;
+                sprite.flipX = false;
+            }
         }
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
@@ -72,5 +80,19 @@ public class MovingPlatform : MonoBehaviour
     private void OnDestroy()
     {
         UseVines.onActivateVines -= HoldPlatform;
+    }
+
+   void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            PlayerDeath.onDeath += RestartScene;
+        }
+    }
+
+    private void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        PlayerDeath.onDeath -= RestartScene;
     }
 }

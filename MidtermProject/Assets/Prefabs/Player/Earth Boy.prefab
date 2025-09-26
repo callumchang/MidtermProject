@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -2520247130139110639}
   - component: {fileID: -5633812259240940298}
   m_Layer: 0
-  m_Name: Samurai Tester
+  m_Name: Earth Boy
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
