@@ -21,7 +21,7 @@ public class MovingPlatform : MonoBehaviour
     void Start()
     {
         // transform.position = points[startingPoint].position;
-        UseVines.onActivateVines += HoldPlatform;
+        // UseVines.onActivateVines += HoldPlatform;
         sprite = GetComponent<SpriteRenderer>();
         platformCollider = GetComponent<BoxCollider2D>();
         platformBounds = platformCollider.bounds;
@@ -53,7 +53,7 @@ public class MovingPlatform : MonoBehaviour
         vinesActive = false;
     }
 
-    private void HoldPlatform()
+    public void HoldPlatform()
     {
         if (!vinesActive)
         {
@@ -63,6 +63,11 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.transform.SetParent(transform);
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         collision.transform.SetParent(null);
@@ -70,6 +75,6 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnDestroy()
     {
-        UseVines.onActivateVines -= HoldPlatform;
+        // UseVines.onActivateVines -= HoldPlatform;
     }
 }

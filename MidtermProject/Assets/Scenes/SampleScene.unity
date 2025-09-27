@@ -1426,46 +1426,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1424524378094125501, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6017952362113961645, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_Size.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6017952362113961645, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 2496206029158282657, guid: 7a6261b02bf541f46848131ac21ff1f7, type: 3}
-    - target: {fileID: 6903696109666342165, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_Size.x
-      value: 1.1475601
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903696109666342165, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_Size.y
-      value: 1.6309617
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903696109666342165, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.2213397
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903696109666342165, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.65632904
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903696109666342165, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903696109666342165, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5519999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6903696109666342165, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 3.196
-      objectReference: {fileID: 0}
     - target: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.869554
@@ -1506,10 +1466,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8961758782503567890, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
-      propertyPath: jumpNoise
-      value: 
-      objectReference: {fileID: 8300000, guid: 126c81a851082814b97c7f8d3751369e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

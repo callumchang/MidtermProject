@@ -5,9 +5,10 @@ public class UseVines : MonoBehaviour
     private bool inRange = false;
     // private MovingPlatform movingPlatform;
 
-    public delegate void ActivateVines();
-    public static ActivateVines onActivateVines;
+    // public delegate void ActivateVines();
+    // public static ActivateVines onActivateVines;
     public SpriteRenderer outlineRenderer;
+    public MovingPlatform movingPlatform;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +27,7 @@ public class UseVines : MonoBehaviour
     {
         if (inRange)
         {
-            onActivateVines?.Invoke();
+            movingPlatform.HoldPlatform();
         }
     }
     
