@@ -61,7 +61,7 @@ VisualEffect:
       m_Array: []
     m_Int:
       m_Array:
-      - m_Value: 4
+      - m_Value: 0
         m_Name: SpawnRate
         m_Overridden: 1
     m_Matrix4x4f:
@@ -326,7 +326,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jumpNoise: {fileID: 8300000, guid: 126c81a851082814b97c7f8d3751369e, type: 3}
+  jumpNoise: {fileID: 8300000, guid: 9dad3830534b0420fb5a4a91fff7adb0, type: 3}
   isGrounded: 0
 --- !u!114 &-5158543307067710162
 MonoBehaviour:
