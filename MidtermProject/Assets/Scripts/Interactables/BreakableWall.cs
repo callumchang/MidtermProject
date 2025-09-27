@@ -4,6 +4,8 @@ public class BreakableWall : MonoBehaviour
 {
     private bool inRange = false;
 
+    public SpriteRenderer outlineRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +31,7 @@ public class BreakableWall : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = true;
+            outlineRenderer.enabled = true;
         }
         // Debug.Log("trigger");
     }
@@ -38,6 +41,7 @@ public class BreakableWall : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             inRange = false;
+            outlineRenderer.enabled = false;
         }
     }
 }

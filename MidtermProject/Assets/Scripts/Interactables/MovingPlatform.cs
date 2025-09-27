@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Adapted from https://youtu.be/GtX1p4cwYOc?si=1GFB4Krbm5gJ9cGs
 public class MovingPlatform : MonoBehaviour
@@ -7,24 +8,38 @@ public class MovingPlatform : MonoBehaviour
     public float speed;
     public int startingPoint = 0;
     public Transform[] points;
+    public bool flipSprite = false;
 
+    private SpriteRenderer sprite;
     private int i;
     private bool vinesActive = false;
+    private BoxCollider2D platformCollider;
+    private Bounds platformBounds;
+    float platformSize;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // transform.position = points[startingPoint].position;
         UseVines.onActivateVines += HoldPlatform;
+        sprite = GetComponent<SpriteRenderer>();
+        platformCollider = GetComponent<BoxCollider2D>();
+        platformBounds = platformCollider.bounds;
+        platformSize = platformBounds.max.x - platformBounds.min.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, points[i].position) < 0.02f)
+        if (Vector2.Distance(transform.position, points[i].position) < platformSize / 2)
         {
+            if (flipSprite) sprite.flipX = true;
             i += 1;
-            if (i == points.Length) i = 0;
+            if (i == points.Length)
+            {
+                i = 0;
+                sprite.flipX = false;
+            }
         }
         transform.position = Vector2.MoveTowards(transform.position, points[i].position, speed * Time.deltaTime);
     }
@@ -48,18 +63,13 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    public void UpdatePlatformSpeed(float newSpeed)
-    {
-        speed = newSpeed;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        collision.transform.SetParent(transform);
-    }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         collision.transform.SetParent(null);
+    }
+
+    private void OnDestroy()
+    {
+        UseVines.onActivateVines -= HoldPlatform;
     }
 }
