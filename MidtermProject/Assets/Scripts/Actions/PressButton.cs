@@ -6,6 +6,9 @@ public class PressButton : MonoBehaviour
     [SerializeField] Sprite buttonDown;
 
     private SpriteRenderer sprite;
+    public GameObject current;
+    // public delegate void ActivateButton();
+    // public static ActivateButton onButtonActivation;
 
     void Start()
     {
@@ -17,7 +20,8 @@ public class PressButton : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             sprite.sprite = buttonDown;
-            PlayerInteractController.onInteract?.Invoke();
+            // PlayerInteractController.onInteract?.Invoke();
+            Destroy(current);
         }
     }
 }

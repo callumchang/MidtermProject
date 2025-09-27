@@ -8,7 +8,7 @@ public class CurrentLogic : MonoBehaviour
 
     void Start()
     {
-        PlayerInteractController.onInteract += deactivateCurrent;
+        // PlayerInteractController.onInteract += deactivateCurrent;
     }
 
     void OnTriggerStay2D(Collider2D collision)
@@ -19,7 +19,7 @@ public class CurrentLogic : MonoBehaviour
 
             if (player != null)
             {
-                player.AddForce(force * power, ForceMode2D.Force);
+                player.AddForceX(force.x * power, ForceMode2D.Force);
             }
         }
     }
