@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c811f5c8adbcc4b95abddca78e4d5577
+guid: 8201c25a2ee24df469b6b02adec8a1ba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5616400438428163479
-    second: "Screenshot 2025-09-26 at 9.28.42\u202FPM_0"
+      213: 2530564911472380330
+    second: button_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WhiteSquare
+      name: button_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 18
+        y: 15
+        width: 387
+        height: 207
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 79ddbd8117671fd40800000000000000
-      internalID: 5616400438428163479
+      spriteID: aa90165216f5e1320800000000000000
+      internalID: 2530564911472380330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: button_1
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 11
+        width: 387
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779c5d0a0b757c842ba41bec38bde176
+      internalID: 1978123114
       vertices: []
       indices: 
       edges: []
@@ -138,7 +160,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ff43a50c67b0b4ae38a4e1ecbf6d7ade
+    spriteID: e9788227f3a672448b5bd900d9a7e041
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +170,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      WhiteSquare: 5616400438428163479
+      button_0: 2530564911472380330
+      button_1: 1978123114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
