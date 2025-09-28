@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 524866023453208611}
   - component: {fileID: 8771165708571743986}
   m_Layer: 3
-  m_Name: Floor
+  m_Name: LongestPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
