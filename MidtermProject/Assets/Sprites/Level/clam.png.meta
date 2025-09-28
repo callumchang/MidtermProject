@@ -133,7 +133,7 @@ TextureImporter:
         width: 63
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -150,10 +150,10 @@ TextureImporter:
       name: clam_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 163
-        width: 64
-        height: 55
+        x: 129
+        y: 167
+        width: 63
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,7 +177,7 @@ TextureImporter:
         width: 63
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -195,9 +195,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 99
-        width: 64
-        height: 55
+        y: 100
+        width: 63
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,9 +217,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 33
-        width: 64
-        height: 55
+        y: 34
+        width: 63
+        height: 62
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,7 +243,7 @@ TextureImporter:
         width: 63
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
