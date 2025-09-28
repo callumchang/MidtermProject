@@ -5,17 +5,20 @@ using UnityEngine.SceneManagement;
 //Adapted from https://youtu.be/GtX1p4cwYOc?si=1GFB4Krbm5gJ9cGs
 public class MovingPlatform : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float speed;
     public int startingPoint = 0;
     public Transform[] points;
     public bool flipSprite = false;
+    public bool verticalMovement;
 
     private SpriteRenderer sprite;
     private int i;
     private bool vinesActive = false;
     private BoxCollider2D platformCollider;
     private Bounds platformBounds;
-    float platformSize;
+    private float platformLength;
+    private float platformHeight;
+    private float platformSize;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,7 +28,13 @@ public class MovingPlatform : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         platformCollider = GetComponent<BoxCollider2D>();
         platformBounds = platformCollider.bounds;
-        platformSize = platformBounds.max.x - platformBounds.min.x;
+        platformLength = platformBounds.max.x - platformBounds.min.x;
+        platformHeight = platformBounds.max.y - platformBounds.min.y;
+        platformSize = platformLength;
+        if (verticalMovement)
+        {
+            platformSize = platformHeight;
+        }
     }
 
     // Update is called once per frame

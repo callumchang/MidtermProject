@@ -9,12 +9,12 @@ public class ClamLogic : MonoBehaviour
     [SerializeField] float closeTime;
     [SerializeField] float openTime;
 
-    private SpriteRenderer clamSpirte;
+    private SpriteRenderer clamSprite;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        clamSpirte = GetComponent<SpriteRenderer>();
+        clamSprite = GetComponent<SpriteRenderer>();
         StartCoroutine(shutClam());
     }
 
@@ -23,11 +23,13 @@ public class ClamLogic : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(openTime);
-            clamSpirte.sprite = closedClam;
+            clamSprite.sprite = closedClam;
+            clamSprite.sortingLayerName = "Default";
             gameObject.GetComponent<Collider2D>().isTrigger = true;
 
             yield return new WaitForSeconds(closeTime);
-            clamSpirte.sprite = openClam;
+            clamSprite.sprite = openClam;
+            clamSprite.sortingLayerName = "Background";
             gameObject.GetComponent<Collider2D>().isTrigger = false;
             
         }

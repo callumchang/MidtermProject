@@ -19,7 +19,7 @@ public class CurrentLogic : MonoBehaviour
 
             if (player != null)
             {
-                player.AddForceX(force.x * power, ForceMode2D.Force);
+                player.AddForce(force * power, ForceMode2D.Force);
             }
         }
     }
