@@ -19,23 +19,24 @@ public class AudioManager : MonoBehaviour
         applyVolumes();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void playSFX(AudioClip clip, float pitchLowRange = 0.75f, float pitchHighRange = 1.5f)
+    public void playSFX(AudioClip clip, float pitchLowRange, float pitchHighRange, float volume, float time = 0)
     {
         if (clip == null) return;
-        sfxSource.pitch = UnityEngine.Random.Range(pitchLowRange, pitchHighRange);
-        sfxSource.PlayOneShot(clip, sfxVolume);
+
+        AudioSource tempSource = gameObject.AddComponent<AudioSource>();
+        tempSource.clip = clip;
+        tempSource.volume = volume;
+        tempSource.pitch = UnityEngine.Random.Range(pitchLowRange, pitchHighRange);
+        tempSource.Play();
+
+        if (time > 0f)
+        {
+            Destroy(tempSource, time);
+        }
+        else
+        {
+            Destroy(tempSource, clip.length / tempSource.pitch);
+        }
     }
 
     public void playMusic(AudioClip clip)
@@ -50,11 +51,6 @@ public class AudioManager : MonoBehaviour
     {
         isMuted = muted;
         AudioListener.volume = muted ? 0f : 1f;
-    }
-
-    public void stop()
-    {
-        sfxSource.Stop();
     }
 
     private void makeAudioManagerSingleton()

@@ -3,10 +3,11 @@ using UnityEngine.UI;
 
 public class PressButton : MonoBehaviour
 {
+    public GameObject current;
+
     [SerializeField] Sprite buttonDown;
 
     private SpriteRenderer sprite;
-    public GameObject current;
     // public delegate void ActivateButton();
     // public static ActivateButton onButtonActivation;
 
@@ -21,6 +22,7 @@ public class PressButton : MonoBehaviour
         {
             sprite.sprite = buttonDown;
             // PlayerInteractController.onInteract?.Invoke();
+            current.GetComponent<CurrentLogic>().stopSound();
             Destroy(current);
         }
     }

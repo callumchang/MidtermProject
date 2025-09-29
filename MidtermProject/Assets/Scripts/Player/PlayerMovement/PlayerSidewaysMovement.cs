@@ -12,6 +12,7 @@ public class PlayerSidewaysMovement : MonoBehaviour
     [SerializeField] VisualEffect movementParticles;
     [SerializeField] AudioClip movingNoise;
     [SerializeField] float timeBetweenMoveNoise;
+    [SerializeField] float volumeofClip;
 
     private Rigidbody2D playerRigidbody;
     private SpriteRenderer playerSprite;
@@ -33,12 +34,11 @@ public class PlayerSidewaysMovement : MonoBehaviour
         if (isMoving && !wasMoving)
         {
             wasMoving = true;
-            AudioManager.Instance?.playSFX(movingNoise, 0.8f, 1.2f);
+            AudioManager.Instance?.playSFX(movingNoise, 0.8f, 1.2f, volumeofClip);
         }
         else if (!isMoving && wasMoving)
         {
             wasMoving = false;
-            AudioManager.Instance?.stop();
         }
     }
 

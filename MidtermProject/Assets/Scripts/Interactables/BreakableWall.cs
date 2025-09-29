@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class BreakableWall : MonoBehaviour
 {
-    private bool inRange = false;
-
     public SpriteRenderer outlineRenderer;
+    
+    [SerializeField] AudioClip wallBreakNoise;
+    [SerializeField] float volumeOfClip;
+
+    private bool inRange = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +25,7 @@ public class BreakableWall : MonoBehaviour
     {
         if (inRange)
         {
+            AudioManager.Instance?.playSFX(wallBreakNoise, 2f, 3f, volumeOfClip);
             Destroy(gameObject);
         }
     }

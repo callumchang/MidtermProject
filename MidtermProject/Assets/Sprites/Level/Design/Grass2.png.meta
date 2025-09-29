@@ -1,31 +1,52 @@
 fileFormatVersion: 2
-guid: 86c803d8d5ca4924c96fd0a824f0d165
+guid: 0c6bbfba003cc044b8dfdaa270f77691
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 112585039668875551
-    second: Untitled_Artwork-1 (16)_0
+      213: 8061518789377532139
+    second: Untitled_Artwork-2 (7)_0
   - first:
-      213: -8972215345289015186
-    second: Untitled_Artwork-1 (16)_1
+      213: 3235951590616836531
+    second: Untitled_Artwork-2 (7)_1
   - first:
-      213: 6315625045914528063
-    second: Untitled_Artwork-1 (16)_2
+      213: 766717625692173780
+    second: Untitled_Artwork-2 (7)_2
   - first:
-      213: -6495991873396901451
-    second: Untitled_Artwork-1 (16)_3
+      213: -498255468632725690
+    second: Untitled_Artwork-2 (7)_3
   - first:
-      213: 1799141188215567947
-    second: Untitled_Artwork-1 (16)_4
+      213: -8951581511882472070
+    second: Untitled_Artwork-2 (7)_4
   - first:
-      213: -2080377134965924088
-    second: Untitled_Artwork-1 (16)_5
+      213: -1710348243546383816
+    second: Untitled_Artwork-2 (7)_5
   - first:
-      213: 7226812665860356152
-    second: Untitled_Artwork-1 (16)_6
+      213: 7750514393789782030
+    second: Untitled_Artwork-2 (7)_6
   - first:
-      213: -6822661818091104603
-    second: Untitled_Artwork-1 (16)_7
+      213: -1101349715582130542
+    second: Untitled_Artwork-2 (7)_7
+  - first:
+      213: -5832291317570281094
+    second: Untitled_Artwork-2 (7)_8
+  - first:
+      213: 2277381674820339689
+    second: Untitled_Artwork-2 (7)_9
+  - first:
+      213: -9027626644389751619
+    second: Untitled_Artwork-2 (7)_10
+  - first:
+      213: -5878699039737902164
+    second: Untitled_Artwork-2 (7)_11
+  - first:
+      213: -584939233592335921
+    second: Untitled_Artwork-2 (7)_12
+  - first:
+      213: 1448126372442095127
+    second: Untitled_Artwork-2 (7)_13
+  - first:
+      213: 3184431140198365365
+    second: Untitled_Artwork-2 (7)_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -117,17 +138,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass1_0
+      name: Grass2_0
       rect:
         serializedVersion: 2
-        x: 319
+        x: 324
         y: 0
-        width: 1834
-        height: 909
+        width: 1827
+        height: 904
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +170,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529ec603a444c06448622010789419f2
-      internalID: -125422296
+      spriteID: 13df95932e8f68c4e8b3a2cb5f5d1175
+      internalID: 488897420
       vertices: []
       indices: 
       edges: []
@@ -146,7 +180,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7a5a3017ca196564abcc0829809bb7ab
+    spriteID: 03ecf41ef5140de43bdaf51221ab956b
     internalID: 0
     vertices: []
     indices: 
@@ -156,15 +190,22 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass1_0: -125422296
-      Untitled_Artwork-1 (16)_0: 112585039668875551
-      Untitled_Artwork-1 (16)_1: -8972215345289015186
-      Untitled_Artwork-1 (16)_2: 6315625045914528063
-      Untitled_Artwork-1 (16)_3: -6495991873396901451
-      Untitled_Artwork-1 (16)_4: 1799141188215567947
-      Untitled_Artwork-1 (16)_5: -2080377134965924088
-      Untitled_Artwork-1 (16)_6: 7226812665860356152
-      Untitled_Artwork-1 (16)_7: -6822661818091104603
+      Grass2_0: 488897420
+      Untitled_Artwork-2 (7)_0: 8061518789377532139
+      Untitled_Artwork-2 (7)_1: 3235951590616836531
+      Untitled_Artwork-2 (7)_10: -9027626644389751619
+      Untitled_Artwork-2 (7)_11: -5878699039737902164
+      Untitled_Artwork-2 (7)_12: -584939233592335921
+      Untitled_Artwork-2 (7)_13: 1448126372442095127
+      Untitled_Artwork-2 (7)_14: 3184431140198365365
+      Untitled_Artwork-2 (7)_2: 766717625692173780
+      Untitled_Artwork-2 (7)_3: -498255468632725690
+      Untitled_Artwork-2 (7)_4: -8951581511882472070
+      Untitled_Artwork-2 (7)_5: -1710348243546383816
+      Untitled_Artwork-2 (7)_6: 7750514393789782030
+      Untitled_Artwork-2 (7)_7: -1101349715582130542
+      Untitled_Artwork-2 (7)_8: -5832291317570281094
+      Untitled_Artwork-2 (7)_9: 2277381674820339689
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

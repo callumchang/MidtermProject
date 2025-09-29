@@ -10,14 +10,13 @@ public class UnitizedJumps : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] AudioClip jumpNoise;
     [SerializeField] AudioClip landNoise;
+    [SerializeField] float volumeOfClip;
 
     private Rigidbody2D playerRb;
     private BoxCollider2D playerHitBox;
     private Animator animator;
     public bool isGrounded;
     private bool wasGrounded;
-
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,7 +37,7 @@ public class UnitizedJumps : MonoBehaviour
 
         if (!wasGrounded && isGrounded)
         {
-            AudioManager.Instance?.playSFX(landNoise, 0.8f, 1.2f);
+            AudioManager.Instance?.playSFX(landNoise, 0.8f, 1.2f, volumeOfClip);
         }
 
         preventFloatJump();
@@ -61,7 +60,7 @@ public class UnitizedJumps : MonoBehaviour
         // Debug.Log(Physics2D.gravity.y);
         // Debug.Log("Jump force is: " + jumpForce);
         playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        AudioManager.Instance?.playSFX(jumpNoise, 0.8f, 1.2f);
+        AudioManager.Instance?.playSFX(jumpNoise, 0.8f, 1.2f, volumeOfClip);
     }
 
     private void preventFloatJump()

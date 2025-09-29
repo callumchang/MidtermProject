@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46594afb2861e4869a18aa0431ab9bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spikeNoise: {fileID: 8300000, guid: 858cc47a5db172d468a456a587560c38, type: 3}
+  volumeOfClip: 4
 --- !u!1 &9165763852080656879
 GameObject:
   m_ObjectHideFlags: 0
