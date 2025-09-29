@@ -14,6 +14,11 @@ public class Spikes : MonoBehaviour
         }
     }
 
+    public void causeDeath()
+    {
+        onDeath?.Invoke();
+    }
+
     // public void RestartScene()
     // {
     //     SceneManager.LoadScene(SceneManager.GetActiveScene().name);

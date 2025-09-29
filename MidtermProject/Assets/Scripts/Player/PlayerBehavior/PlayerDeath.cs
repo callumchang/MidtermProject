@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 public class PlayerDeath : MonoBehaviour
 {
     Transform latestCheckpoint;
+    [SerializeField] private GameObject checkpointParticles;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +34,7 @@ public class PlayerDeath : MonoBehaviour
     public void UpdateLatestCheckpoint(Transform checkpoint)
     {
         latestCheckpoint = checkpoint;
+        checkpointParticles.transform.position = checkpoint.position;
         Debug.Log("Updated checkpoint");
     }
 }

@@ -4,7 +4,7 @@ public class BreakableWall : MonoBehaviour
 {
     private bool inRange = false;
 
-    public SpriteRenderer outlineRenderer;
+    [SerializeField] private SpriteRenderer outlineRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
