@@ -5,27 +5,36 @@ using UnityEngine.SceneManagement;
 //Adapted from https://youtu.be/GtX1p4cwYOc?si=1GFB4Krbm5gJ9cGs
 public class MovingPlatform : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float speed;
     public int startingPoint = 0;
     public Transform[] points;
     public bool flipSprite = false;
+    public bool verticalMovement;
 
     private SpriteRenderer sprite;
     private int i;
     private bool vinesActive = false;
     private BoxCollider2D platformCollider;
     private Bounds platformBounds;
-    float platformSize;
+    private float platformLength;
+    private float platformHeight;
+    private float platformSize;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // transform.position = points[startingPoint].position;
-        UseVines.onActivateVines += HoldPlatform;
+        // UseVines.onActivateVines += HoldPlatform;
         sprite = GetComponent<SpriteRenderer>();
         platformCollider = GetComponent<BoxCollider2D>();
         platformBounds = platformCollider.bounds;
-        platformSize = platformBounds.max.x - platformBounds.min.x;
+        platformLength = platformBounds.max.x - platformBounds.min.x;
+        platformHeight = platformBounds.max.y - platformBounds.min.y;
+        platformSize = platformLength;
+        if (verticalMovement)
+        {
+            platformSize = platformHeight;
+        }
     }
 
     // Update is called once per frame
@@ -53,7 +62,7 @@ public class MovingPlatform : MonoBehaviour
         vinesActive = false;
     }
 
-    private void HoldPlatform()
+    public void HoldPlatform()
     {
         if (!vinesActive)
         {
@@ -63,6 +72,11 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.transform.SetParent(transform);
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         collision.transform.SetParent(null);
@@ -70,6 +84,6 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnDestroy()
     {
-        UseVines.onActivateVines -= HoldPlatform;
+        // UseVines.onActivateVines -= HoldPlatform;
     }
 }

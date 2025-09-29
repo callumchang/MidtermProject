@@ -51,7 +51,7 @@ public class UnitizedJumps : MonoBehaviour
         // Debug.Log(Physics2D.gravity.y);
         // Debug.Log("Jump force is: " + jumpForce);
         playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        AudioManager.Instance?.playSFX(jumpNoise, 0.8f, 1.5f);
+        AudioManager.Instance?.playSFX(jumpNoise, 0.8f, 1.2f);
     }
 
     private void preventFloatJump()

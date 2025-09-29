@@ -1,12 +1,17 @@
 using System;
 using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class PlayerSidewaysMovement : MonoBehaviour
 {
     public float speed;
 
-    [SerializeField] Animator samuraiAnimator;
+    [SerializeField] Animator playerAnimator;
+
+    [SerializeField] VisualEffect movementParticles;
+
+    public int bubbleSpawnRate;
 
     private Rigidbody2D playerRigidbody;
     private SpriteRenderer playerSprite;
@@ -32,11 +37,13 @@ public class PlayerSidewaysMovement : MonoBehaviour
 
         if (movingDirection != 0)
         {
-            samuraiAnimator.SetBool("isRunning", true);
+            playerAnimator.SetBool("isRunning", true);
+            movementParticles.SetInt("SpawnRate", bubbleSpawnRate);
         }
         else
         {
-            samuraiAnimator.SetBool("isRunning", false);
+            playerAnimator.SetBool("isRunning", false);
+            movementParticles.SetInt("SpawnRate", 0);
         }
 
 
