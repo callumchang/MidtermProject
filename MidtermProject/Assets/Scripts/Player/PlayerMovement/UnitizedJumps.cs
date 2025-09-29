@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class UnitizedJumps : MonoBehaviour
@@ -5,13 +6,16 @@ public class UnitizedJumps : MonoBehaviour
     [SerializeField] float maximumJumpHeight;
     [SerializeField] float forceOfGravity = 1;
     [SerializeField] float fallingForceOfGravity = 5;
+    [SerializeField] float maximumFall;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] AudioClip jumpNoise;
+    [SerializeField] AudioClip landNoise;
 
     private Rigidbody2D playerRb;
     private BoxCollider2D playerHitBox;
     private Animator animator;
     public bool isGrounded;
+    private bool wasGrounded;
 
 
 
@@ -32,6 +36,11 @@ public class UnitizedJumps : MonoBehaviour
             handleJump();
         }
 
+        if (!wasGrounded && isGrounded)
+        {
+            AudioManager.Instance?.playSFX(landNoise, 0.8f, 1.2f);
+        }
+
         preventFloatJump();
         // Debug.Log("The player y velocity: " + playerRb.linearVelocity.y + "\n" + "The player gravity: " + playerRb.gravityScale);
 
@@ -39,8 +48,9 @@ public class UnitizedJumps : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("isJumping", inAir);
-
         }
+
+        wasGrounded = isGrounded;
 
     }
 
@@ -56,13 +66,17 @@ public class UnitizedJumps : MonoBehaviour
 
     private void preventFloatJump()
     {
-        if (playerRb.linearVelocity.y >= 0)
+        float fallingSpeed = playerRb.linearVelocityY;
+        if (fallingSpeed >= 0)
         {
             playerRb.gravityScale = forceOfGravity;
         }
-        else if (playerRb.linearVelocity.y < 0)
+        else if (fallingSpeed < 0)
         {
             playerRb.gravityScale = fallingForceOfGravity;
+            // Debug.Log("fall speed before max" + playerRb.linearVelocityY);
+            playerRb.linearVelocityY = Mathf.Max(fallingSpeed, maximumFall);
+            // Debug.Log("after max" + playerRb.linearVelocityY);
         }
     }
 

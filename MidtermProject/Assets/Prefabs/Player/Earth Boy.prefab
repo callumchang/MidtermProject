@@ -199,8 +199,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 16485671
-  m_SortingLayer: -1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 2496206029158282657, guid: 7a6261b02bf541f46848131ac21ff1f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -323,10 +323,12 @@ MonoBehaviour:
   maximumJumpHeight: 3
   forceOfGravity: 7
   fallingForceOfGravity: 9
+  maximumFall: -10
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   jumpNoise: {fileID: 8300000, guid: 9dad3830534b0420fb5a4a91fff7adb0, type: 3}
+  landNoise: {fileID: 8300000, guid: de2660058eb55694b97f4b7118b1b5a5, type: 3}
   isGrounded: 0
 --- !u!114 &-5158543307067710162
 MonoBehaviour:
@@ -341,9 +343,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
+  bubbleSpawnRate: 5
   playerAnimator: {fileID: 7543518889275192943}
   movementParticles: {fileID: 3345354265146829115}
-  bubbleSpawnRate: 5
+  movingNoise: {fileID: 8300000, guid: 106bfeb5e4567314692def079584fbe8, type: 3}
+  timeBetweenMoveNoise: 5
 --- !u!114 &6122604119732270905
 MonoBehaviour:
   m_ObjectHideFlags: 0

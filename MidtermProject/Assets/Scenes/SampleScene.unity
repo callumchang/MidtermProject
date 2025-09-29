@@ -2086,7 +2086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2250,6 +2250,14 @@ PrefabInstance:
     - target: {fileID: 4331238566062078274, guid: 768d3cc6aa600fc44b1257877aa23559, type: 3}
       propertyPath: m_Name
       value: Clam
+      objectReference: {fileID: 0}
+    - target: {fileID: 4331238566062078274, guid: 768d3cc6aa600fc44b1257877aa23559, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321809586703431631, guid: 768d3cc6aa600fc44b1257877aa23559, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6334349287403893652, guid: 768d3cc6aa600fc44b1257877aa23559, type: 3}
       propertyPath: m_LocalPosition.x

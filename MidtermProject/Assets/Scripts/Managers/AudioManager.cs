@@ -52,6 +52,11 @@ public class AudioManager : MonoBehaviour
         AudioListener.volume = muted ? 0f : 1f;
     }
 
+    public void stop()
+    {
+        sfxSource.Stop();
+    }
+
     private void makeAudioManagerSingleton()
     {
         if (Instance != null && Instance != this)
@@ -64,7 +69,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void makeMusicSourceLoopable()
+    public void makeMusicSourceLoopable()
     {
         musicSource.loop = true;
     }
