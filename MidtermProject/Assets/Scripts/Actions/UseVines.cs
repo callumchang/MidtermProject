@@ -7,8 +7,8 @@ public class UseVines : MonoBehaviour
 
     // public delegate void ActivateVines();
     // public static ActivateVines onActivateVines;
-    public SpriteRenderer outlineRenderer;
-    public MovingPlatform movingPlatform;
+    [SerializeField] private SpriteRenderer outlineRenderer;
+    [SerializeField] private MovingPlatform movingPlatform;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
