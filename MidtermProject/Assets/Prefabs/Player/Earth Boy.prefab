@@ -329,7 +329,7 @@ MonoBehaviour:
     m_Bits: 8
   jumpNoise: {fileID: 8300000, guid: 9dad3830534b0420fb5a4a91fff7adb0, type: 3}
   landNoise: {fileID: 8300000, guid: c9a86aee39961234d8a273bc99ea2f4c, type: 3}
-  volumeOfClip: 1
+  volumeOfClip: 0.8
   isGrounded: 0
 --- !u!114 &-5158543307067710162
 MonoBehaviour:
@@ -349,7 +349,7 @@ MonoBehaviour:
   movementParticles: {fileID: 3345354265146829115}
   movingNoise: {fileID: 8300000, guid: 106bfeb5e4567314692def079584fbe8, type: 3}
   timeBetweenMoveNoise: 5
-  volumeofClip: 1
+  volumeofClip: 0.8
 --- !u!114 &6122604119732270905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   teleportSFX: {fileID: 8300000, guid: e59aefb00bfddc34780da0e9cef75a5f, type: 3}
-  volumeOfClip: 0.1
+  volumeOfClip: 0.2
 --- !u!114 &-2520247130139110639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,3 +389,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c967d1c349e1e432d9aa08106f3ddd31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointParticles: {fileID: 0}

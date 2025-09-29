@@ -107,7 +107,7 @@ MonoBehaviour:
   force: {x: 0, y: 0}
   power: 0
   currentNoise: {fileID: 8300000, guid: ff5f0325ae9a76f41bf4112734d90d85, type: 3}
-  volumeOfClip: 0.01
+  volumeOfClip: 0.04
 --- !u!61 &672249353182458772
 BoxCollider2D:
   m_ObjectHideFlags: 0
