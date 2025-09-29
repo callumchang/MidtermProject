@@ -263,6 +263,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3291766c8e92a8e47932ba41434ca6a9, type: 3}
+--- !u!4 &116700311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2683699872898781138, guid: 8d879927b66ba471a9620d188119075e, type: 3}
+  m_PrefabInstance: {fileID: 1749145197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &122661581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -923,6 +928,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2051126863}
+    - targetCorrespondingSourceObject: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 923064594}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
 --- !u!1 &336132330
@@ -1589,7 +1597,7 @@ Transform:
   m_LocalScale: {x: 5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 486220706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &651720085
 MonoBehaviour:
@@ -2589,7 +2597,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1211771990}
     m_Modifications:
     - target: {fileID: 7000208518673278379, guid: 203ba10ed07c444c5b517328db1f7547, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2991,6 +2999,10 @@ PrefabInstance:
     - target: {fileID: 239436209293792875, guid: 46238a3c6b8764d399045773faa5f5e8, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 239436209293792875, guid: 46238a3c6b8764d399045773faa5f5e8, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6998591436087500132, guid: 46238a3c6b8764d399045773faa5f5e8, type: 3}
       propertyPath: m_Name
@@ -3925,6 +3937,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2033837272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1917695810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2683699872898781138, guid: 8d879927b66ba471a9620d188119075e, type: 3}
+  m_PrefabInstance: {fileID: 813428342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1922876723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4223,6 +4240,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BreakableWall
       objectReference: {fileID: 0}
+    - target: {fileID: 4143148164016188152, guid: 91434e24d512d44c08c2d197f5759031, type: 3}
+      propertyPath: volumeOfClip
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143148164016188152, guid: 91434e24d512d44c08c2d197f5759031, type: 3}
+      propertyPath: wallBreakNoise
+      value: 
+      objectReference: {fileID: 8300000, guid: 887f072c57d46ce43aca951361415072, type: 3}
     - target: {fileID: 4986543261572721869, guid: 91434e24d512d44c08c2d197f5759031, type: 3}
       propertyPath: m_SortingLayer
       value: -2

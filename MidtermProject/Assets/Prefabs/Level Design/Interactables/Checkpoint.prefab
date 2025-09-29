@@ -103,6 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathManager: {fileID: 0}
   activatedSprite: {fileID: 3854519087547730619, guid: d972a98627079ca4e866d5c023cff33e, type: 3}
+  checkpointNoise: {fileID: 8300000, guid: 3cd9aae44488e8c4ba6037cd6d49570a, type: 3}
+  volumeOfClip: 0.8
 --- !u!61 &2748026573072654724
 BoxCollider2D:
   m_ObjectHideFlags: 0

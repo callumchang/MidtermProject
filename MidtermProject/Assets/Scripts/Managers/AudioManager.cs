@@ -19,39 +19,23 @@ public class AudioManager : MonoBehaviour
         applyVolumes();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void playSFX(AudioClip clip, float pitchLowRange, float pitchHighRange, float volume, float time = 0)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    public void playSFX(AudioClip clip, float pitchLowRange, float pitchHighRange, float volume, float time = 0f)
-    {
-        // Adapted from ChatGPT (Could explain)
         if (clip == null) return;
-        
-        float pitch = UnityEngine.Random.Range(pitchLowRange, pitchHighRange);
 
-        if (time <= 0f)
+        AudioSource tempSource = gameObject.AddComponent<AudioSource>();
+        tempSource.clip = clip;
+        tempSource.volume = volume;
+        tempSource.pitch = UnityEngine.Random.Range(pitchLowRange, pitchHighRange);
+        tempSource.Play();
+
+        if (time > 0f)
         {
-            sfxSource.pitch = pitch;
-            sfxSource.PlayOneShot(clip, volume);
+            Destroy(tempSource, time);
         }
         else
         {
-            AudioSource tempSource = gameObject.AddComponent<AudioSource>();
-            tempSource.clip = clip;
-            tempSource.volume = volume;
-            tempSource.pitch = pitch;
-            tempSource.Play();
-
-            Destroy(tempSource, time);
+            Destroy(tempSource, clip.length / tempSource.pitch);
         }
     }
 
@@ -81,7 +65,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void makeMusicSourceLoopable()
+    public void makeMusicSourceLoopable()
     {
         musicSource.loop = true;
     }
