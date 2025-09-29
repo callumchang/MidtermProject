@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 86c803d8d5ca4924c96fd0a824f0d165
+guid: 1fcf1d88107081b4a82e21b22909213b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 112585039668875551
-    second: Untitled_Artwork-1 (16)_0
+      213: -3739957133524300147
+    second: Untitled_Artwork-1_0
   - first:
-      213: -8972215345289015186
-    second: Untitled_Artwork-1 (16)_1
+      213: 4212383234984719242
+    second: Untitled_Artwork-1_1
   - first:
-      213: 6315625045914528063
-    second: Untitled_Artwork-1 (16)_2
+      213: 3276031004063827194
+    second: Untitled_Artwork-1_2
   - first:
-      213: -6495991873396901451
-    second: Untitled_Artwork-1 (16)_3
+      213: 3389479712174296617
+    second: Untitled_Artwork-1_3
   - first:
-      213: 1799141188215567947
-    second: Untitled_Artwork-1 (16)_4
+      213: 8070821680666110374
+    second: Untitled_Artwork-1_4
   - first:
-      213: -2080377134965924088
-    second: Untitled_Artwork-1 (16)_5
+      213: -651951885983448460
+    second: Untitled_Artwork-1_5
   - first:
-      213: 7226812665860356152
-    second: Untitled_Artwork-1 (16)_6
+      213: 8660050789057059138
+    second: Untitled_Artwork-1_6
   - first:
-      213: -6822661818091104603
-    second: Untitled_Artwork-1 (16)_7
+      213: -8853508179362795219
+    second: Untitled_Artwork-1_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1200
+  spritePixelsToUnits: 800
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,7 +127,7 @@ TextureImporter:
         x: 319
         y: 0
         width: 1834
-        height: 909
+        height: 900
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 529ec603a444c06448622010789419f2
-      internalID: -125422296
+      spriteID: 455db9c2d253f7c48abb723ea1d5c2e7
+      internalID: -542282301
       vertices: []
       indices: 
       edges: []
@@ -146,7 +146,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 7a5a3017ca196564abcc0829809bb7ab
+    spriteID: 3eab0e11359f4fb48b6797ad996ca54c
     internalID: 0
     vertices: []
     indices: 
@@ -156,15 +156,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass1_0: -125422296
-      Untitled_Artwork-1 (16)_0: 112585039668875551
-      Untitled_Artwork-1 (16)_1: -8972215345289015186
-      Untitled_Artwork-1 (16)_2: 6315625045914528063
-      Untitled_Artwork-1 (16)_3: -6495991873396901451
-      Untitled_Artwork-1 (16)_4: 1799141188215567947
-      Untitled_Artwork-1 (16)_5: -2080377134965924088
-      Untitled_Artwork-1 (16)_6: 7226812665860356152
-      Untitled_Artwork-1 (16)_7: -6822661818091104603
+      Grass1_0: -542282301
+      Untitled_Artwork-1_0: -3739957133524300147
+      Untitled_Artwork-1_1: 4212383234984719242
+      Untitled_Artwork-1_2: 3276031004063827194
+      Untitled_Artwork-1_3: 3389479712174296617
+      Untitled_Artwork-1_4: 8070821680666110374
+      Untitled_Artwork-1_5: -651951885983448460
+      Untitled_Artwork-1_6: 8660050789057059138
+      Untitled_Artwork-1_7: -8853508179362795219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

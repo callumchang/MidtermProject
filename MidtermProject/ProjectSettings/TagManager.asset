@@ -42,6 +42,9 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
+    uniqueID: 1736596873
+    locked: 0
+  - name: Farground
     uniqueID: 3147013539
     locked: 0
   - name: Player
