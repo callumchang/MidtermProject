@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
       propertyPath: m_PropertySheet.m_Bool.m_Array.Array.data[0].m_Name
@@ -369,12 +369,24 @@ PrefabInstance:
       value: Horizontal Distance Between Lines
       objectReference: {fileID: 0}
     - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Name
+      value: Vertical Distance Between Lines
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[0].m_Value
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[1].m_Value
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Value
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
       propertyPath: m_PropertySheet.m_Bool.m_Array.Array.data[0].m_Overridden
@@ -392,13 +404,17 @@ PrefabInstance:
       propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[2].m_Overridden
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1581715034133251400, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
+      propertyPath: m_PropertySheet.m_Float.m_Array.Array.data[3].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4155736963748415814, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6
+      value: -0.51
       objectReference: {fileID: 0}
     - target: {fileID: 4155736963748415814, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.37
+      value: -0.38
       objectReference: {fileID: 0}
     - target: {fileID: 4155736963748415814, guid: 349a833cb63254570b0078f396ce6af3, type: 3}
       propertyPath: m_LocalPosition.z
