@@ -2120,9 +2120,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2332385149743756799, guid: 2905853d7e26a4992ac454ea11c40083, type: 3}
+      propertyPath: sceneIndex
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4974815529085618568, guid: 2905853d7e26a4992ac454ea11c40083, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5854051316212823604, guid: 2905853d7e26a4992ac454ea11c40083, type: 3}
       propertyPath: m_Name
       value: RoomTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 5854051316212823604, guid: 2905853d7e26a4992ac454ea11c40083, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
