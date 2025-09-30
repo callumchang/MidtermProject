@@ -7,7 +7,6 @@ public class teleport : MonoBehaviour
     private GameObject locationOfTeleporter;
 
     [SerializeField] AudioClip teleportSFX;
-    [SerializeField] float volumeOfClip;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,7 +27,7 @@ public class teleport : MonoBehaviour
         if (locationOfTeleporter != null)
         {
             transform.position = locationOfTeleporter.GetComponent<TeleporterSpotLogic>().getTeleportSpot().position;
-            AudioManager.Instance?.playSFX(teleportSFX, 2f, 3f, volumeOfClip);
+            AudioManager.Instance?.playSFX(teleportSFX, 2f, 3f);
         }
     }
 

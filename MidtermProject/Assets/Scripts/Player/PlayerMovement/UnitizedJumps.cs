@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class UnitizedJumps : MonoBehaviour
@@ -6,17 +5,15 @@ public class UnitizedJumps : MonoBehaviour
     [SerializeField] float maximumJumpHeight;
     [SerializeField] float forceOfGravity = 1;
     [SerializeField] float fallingForceOfGravity = 5;
-    [SerializeField] float maximumFall;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] AudioClip jumpNoise;
-    [SerializeField] AudioClip landNoise;
-    [SerializeField] float volumeOfClip;
 
     private Rigidbody2D playerRb;
     private BoxCollider2D playerHitBox;
     private Animator animator;
     public bool isGrounded;
-    private bool wasGrounded;
+
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -35,11 +32,6 @@ public class UnitizedJumps : MonoBehaviour
             handleJump();
         }
 
-        if (!wasGrounded && isGrounded)
-        {
-            AudioManager.Instance?.playSFX(landNoise, 0.8f, 1.2f, volumeOfClip);
-        }
-
         preventFloatJump();
         // Debug.Log("The player y velocity: " + playerRb.linearVelocity.y + "\n" + "The player gravity: " + playerRb.gravityScale);
 
@@ -47,9 +39,8 @@ public class UnitizedJumps : MonoBehaviour
         if (animator != null)
         {
             animator.SetBool("isJumping", inAir);
-        }
 
-        wasGrounded = isGrounded;
+        }
 
     }
 
@@ -60,22 +51,18 @@ public class UnitizedJumps : MonoBehaviour
         // Debug.Log(Physics2D.gravity.y);
         // Debug.Log("Jump force is: " + jumpForce);
         playerRb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        AudioManager.Instance?.playSFX(jumpNoise, 0.8f, 1.2f, volumeOfClip);
+        AudioManager.Instance?.playSFX(jumpNoise, 0.8f, 1.2f);
     }
 
     private void preventFloatJump()
     {
-        float fallingSpeed = playerRb.linearVelocityY;
-        if (fallingSpeed >= 0)
+        if (playerRb.linearVelocity.y >= 0)
         {
             playerRb.gravityScale = forceOfGravity;
         }
-        else if (fallingSpeed < 0)
+        else if (playerRb.linearVelocity.y < 0)
         {
             playerRb.gravityScale = fallingForceOfGravity;
-            // Debug.Log("fall speed before max" + playerRb.linearVelocityY);
-            playerRb.linearVelocityY = Mathf.Max(fallingSpeed, maximumFall);
-            // Debug.Log("after max" + playerRb.linearVelocityY);
         }
     }
 

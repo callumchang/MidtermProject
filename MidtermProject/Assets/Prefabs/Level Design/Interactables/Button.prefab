@@ -101,9 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c96e78404a88347a78c7c449ce706b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: {fileID: 817923628226297348, guid: 902e724a92df784459099ef1d3853296, type: 3}
   buttonDown: {fileID: 1978123114, guid: 8201c25a2ee24df469b6b02adec8a1ba, type: 3}
-  currentScript: {fileID: 0}
 --- !u!61 &-9150571907578182901
 BoxCollider2D:
   m_ObjectHideFlags: 0
