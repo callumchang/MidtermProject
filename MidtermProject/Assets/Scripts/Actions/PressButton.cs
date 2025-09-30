@@ -22,8 +22,12 @@ public class PressButton : MonoBehaviour
         {
             sprite.sprite = buttonDown;
             // PlayerInteractController.onInteract?.Invoke();
-            current.GetComponent<CurrentLogic>().stopSound();
-            Destroy(current);
+            if (current != null)
+            {
+                current.GetComponent<CurrentLogic>().stopSound();
+                Destroy(current);
+            }
+            
         }
     }
 }
