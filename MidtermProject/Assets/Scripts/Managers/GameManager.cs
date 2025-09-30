@@ -32,6 +32,11 @@ public class GameManager : MonoBehaviour
         {
             restartFromCheckpoint?.Invoke();
         }
+
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
     
     private void makeGameManagerSingleton()

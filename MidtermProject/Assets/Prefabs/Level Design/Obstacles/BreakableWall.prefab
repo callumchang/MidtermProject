@@ -633,3 +633,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineRenderer: {fileID: 4986543261572721869}
+  wallBreakNoise: {fileID: 8300000, guid: 887f072c57d46ce43aca951361415072, type: 3}
+  volumeOfClip: 2

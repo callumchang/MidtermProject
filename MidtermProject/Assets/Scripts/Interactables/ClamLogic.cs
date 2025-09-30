@@ -8,6 +8,9 @@ public class ClamLogic : MonoBehaviour
     [SerializeField] Sprite openClam;
     [SerializeField] float closeTime;
     [SerializeField] float openTime;
+    [SerializeField] AudioClip clamShutNoise;
+    [SerializeField] AudioClip clamAboutToShutNoise;
+    [SerializeField] float volumeOfClip;
 
     private SpriteRenderer clamSprite;
 
@@ -23,12 +26,14 @@ public class ClamLogic : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(openTime);
+            AudioManager.Instance?.playSFX(clamShutNoise, 0.8f, 1.2f, volumeOfClip);
             clamSprite.sprite = closedClam;
             clamSprite.sortingLayerName = "Default";
             gameObject.GetComponent<Collider2D>().isTrigger = true;
 
             yield return new WaitForSeconds(closeTime);
             clamSprite.sprite = openClam;
+            AudioManager.Instance?.playSFX(clamAboutToShutNoise, 0.8f, 1.2f, volumeOfClip, openTime);
             clamSprite.sortingLayerName = "Farground";
             gameObject.GetComponent<Collider2D>().isTrigger = false;
             

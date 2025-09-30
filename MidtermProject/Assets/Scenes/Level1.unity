@@ -4123,6 +4123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth Boy
       objectReference: {fileID: 0}
+    - target: {fileID: 6360276252121160433, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.2

@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,11 +6,15 @@ public class CurrentLogic : MonoBehaviour
 {
     [SerializeField] Vector2 force;
     [SerializeField] float power;
+    [SerializeField] AudioClip currentNoise;
+    [SerializeField] float volumeOfClip;
 
     void Start()
     {
         // PlayerInteractController.onInteract += deactivateCurrent;
+        StartCoroutine(playSound());
     }
+
 
     void OnTriggerStay2D(Collider2D collision)
     {
@@ -24,9 +29,24 @@ public class CurrentLogic : MonoBehaviour
         }
     }
 
-
-    void deactivateCurrent()
+    public IEnumerator playSound()
     {
-        Destroy(gameObject);
+        while (true)
+        {
+            AudioManager.Instance?.playSFX(currentNoise, 0.8f, 1.2f, volumeOfClip, 3f);
+            yield return null;   
+        }
+        
+        
     }
+
+    public void stopSound()
+    {
+        StopCoroutine(playSound());
+    }
+
+    // void deactivateCurrent()
+    // {
+    //     Destroy(gameObject);
+    // }
 }
