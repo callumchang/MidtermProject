@@ -425,7 +425,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 25.010023, y: 3.786131, z: -2.5386138}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 538666439}
@@ -1247,7 +1247,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 15.604388, y: 5.199728, z: -2.5386138}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 538666439}
@@ -2360,6 +2360,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8951888880146892162, guid: 813c0f5810b7449c4894b8b96e2a2987, type: 3}
   m_PrefabInstance: {fileID: 1259906779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &736233352 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 239436209293792875, guid: 46238a3c6b8764d399045773faa5f5e8, type: 3}
+  m_PrefabInstance: {fileID: 1692953510}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &736378317
 PrefabInstance:
@@ -3752,6 +3757,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3937352368481690829, guid: 01e6f801039170f45b1c6dd3827a55c4, type: 3}
+      propertyPath: sfxSource
+      value: 
+      objectReference: {fileID: 736233352}
+    - target: {fileID: -3937352368481690829, guid: 01e6f801039170f45b1c6dd3827a55c4, type: 3}
+      propertyPath: musicSource
+      value: 
+      objectReference: {fileID: 736233352}
     - target: {fileID: 2260083348949564276, guid: 01e6f801039170f45b1c6dd3827a55c4, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -4111,6 +4124,10 @@ PrefabInstance:
     - target: {fileID: 1424524378094125501, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_Name
       value: Earth Boy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6360276252121160433, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5658,7 +5675,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.2260268, y: 3.578228, z: -2.5386138}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 538666439}
@@ -5869,7 +5886,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.07852, y: 4.6592216, z: -2.5386138}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 538666439}
