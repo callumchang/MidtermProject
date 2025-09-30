@@ -29,7 +29,7 @@ public class ClamLogic : MonoBehaviour
 
             yield return new WaitForSeconds(closeTime);
             clamSprite.sprite = openClam;
-            clamSprite.sortingLayerName = "Background";
+            clamSprite.sortingLayerName = "Farground";
             gameObject.GetComponent<Collider2D>().isTrigger = false;
             
         }

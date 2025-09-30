@@ -485,8 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46594afb2861e4869a18aa0431ab9bb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spikeNoise: {fileID: 0}
-  volumeOfClip: 0
 --- !u!61 &91490381
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2361,6 +2359,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8951888880146892162, guid: 813c0f5810b7449c4894b8b96e2a2987, type: 3}
   m_PrefabInstance: {fileID: 1259906779}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &736233352 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 239436209293792875, guid: 46238a3c6b8764d399045773faa5f5e8, type: 3}
+  m_PrefabInstance: {fileID: 1692953510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &736378317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3752,6 +3755,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3937352368481690829, guid: 01e6f801039170f45b1c6dd3827a55c4, type: 3}
+      propertyPath: sfxSource
+      value: 
+      objectReference: {fileID: 736233352}
+    - target: {fileID: -3937352368481690829, guid: 01e6f801039170f45b1c6dd3827a55c4, type: 3}
+      propertyPath: musicSource
+      value: 
+      objectReference: {fileID: 736233352}
     - target: {fileID: 2260083348949564276, guid: 01e6f801039170f45b1c6dd3827a55c4, type: 3}
       propertyPath: m_Name
       value: AudioManager
