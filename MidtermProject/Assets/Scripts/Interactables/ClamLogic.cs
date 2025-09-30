@@ -13,11 +13,13 @@ public class ClamLogic : MonoBehaviour
     [SerializeField] float volumeOfClip;
 
     private SpriteRenderer clamSprite;
+    private Spikes spikes;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         clamSprite = GetComponent<SpriteRenderer>();
+        spikes = GetComponent<Spikes>();
         StartCoroutine(shutClam());
     }
 
@@ -42,8 +44,10 @@ public class ClamLogic : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) {
-           SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (collision.CompareTag("Player"))
+        {
+            //    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            spikes.causeDeath();
         }
     }
 }
