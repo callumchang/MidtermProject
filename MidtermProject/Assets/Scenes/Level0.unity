@@ -6193,6 +6193,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 313342890600346356, guid: 8d879927b66ba471a9620d188119075e, type: 3}
+      propertyPath: deathManager
+      value: 
+      objectReference: {fileID: 893848264}
     - target: {fileID: 2683699872898781138, guid: 8d879927b66ba471a9620d188119075e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.543
@@ -6389,11 +6393,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.99
+      value: 19.45
       objectReference: {fileID: 0}
     - target: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.32
+      value: 31.11
       objectReference: {fileID: 0}
     - target: {fileID: 6984431775751514224, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6429,6 +6433,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8961758782503567890, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
       propertyPath: maximumFall
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8961758782503567890, guid: ee074ed68cd896d4c94888191b1c2ce2, type: 3}
+      propertyPath: maximumFallRate
       value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
