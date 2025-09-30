@@ -51,17 +51,17 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 0
+      - m_Value: 0.4
         m_Name: Horizontal Distance Between Lines
         m_Overridden: 1
-      - m_Value: 0.25
+      - m_Value: 0
         m_Name: Vertical Distance Between Lines
         m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
       m_Array:
-      - m_Value: {x: 0, y: 1, z: 0}
+      - m_Value: {x: 1, y: 0, z: 0}
         m_Name: RibbonDirection
         m_Overridden: 1
     m_Vector4f:
