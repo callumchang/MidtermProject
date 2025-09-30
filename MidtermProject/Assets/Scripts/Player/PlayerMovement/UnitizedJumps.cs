@@ -5,6 +5,7 @@ public class UnitizedJumps : MonoBehaviour
     [SerializeField] float maximumJumpHeight;
     [SerializeField] float forceOfGravity = 1;
     [SerializeField] float fallingForceOfGravity = 5;
+    [SerializeField] float maximumFallRate;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] AudioClip jumpNoise;
 
@@ -56,13 +57,15 @@ public class UnitizedJumps : MonoBehaviour
 
     private void preventFloatJump()
     {
-        if (playerRb.linearVelocity.y >= 0)
+        float fallingSpeed = playerRb.linearVelocity.y;
+        if (fallingSpeed >= 0)
         {
             playerRb.gravityScale = forceOfGravity;
         }
-        else if (playerRb.linearVelocity.y < 0)
+        else if (fallingSpeed < 0)
         {
             playerRb.gravityScale = fallingForceOfGravity;
+            playerRb.linearVelocityY = Mathf.Max(fallingSpeed, maximumFallRate);
         }
     }
 

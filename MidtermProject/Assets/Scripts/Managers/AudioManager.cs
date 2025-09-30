@@ -31,11 +31,28 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void playSFX(AudioClip clip, float pitchLowRange = 0.75f, float pitchHighRange = 1.5f)
+    public void playSFX(AudioClip clip, float pitchLowRange, float pitchHighRange, float volume, float time = 0f)
     {
+        // Adapted from ChatGPT (Could explain)
         if (clip == null) return;
-        sfxSource.pitch = UnityEngine.Random.Range(pitchLowRange, pitchHighRange);
-        sfxSource.PlayOneShot(clip, sfxVolume);
+        
+        float pitch = UnityEngine.Random.Range(pitchLowRange, pitchHighRange);
+
+        if (time <= 0f)
+        {
+            sfxSource.pitch = pitch;
+            sfxSource.PlayOneShot(clip, volume);
+        }
+        else
+        {
+            AudioSource tempSource = gameObject.AddComponent<AudioSource>();
+            tempSource.clip = clip;
+            tempSource.volume = volume;
+            tempSource.pitch = pitch;
+            tempSource.Play();
+
+            Destroy(tempSource, time);
+        }
     }
 
     public void playMusic(AudioClip clip)
